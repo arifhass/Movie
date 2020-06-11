@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context="com.example.movie.Register2">
+
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="127dp"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        app:srcCompat="@drawable/logo"/>-->
+
+    <EditText
+        android:id="@+id/edittext_username"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/username"
+        android:hint="@string/username"
+        android:paddingLeft="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/edittext_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.492" />
+
+    <EditText
+        android:id="@+id/edittext_password"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/password"
+        android:hint="@string/password"
+        app:layout_constraintBottom_toTopOf="@+id/edittext_cnf_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edittext_cnf_password"
+        android:layout_width="206dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="50dp"
+        android:background="#ffffff"
+        android:drawableLeft="@drawable/password"
+        android:hint="@string/confirm_password"
+        app:layout_constraintBottom_toTopOf="@+id/button_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="70dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="50dp"
+        android:background="?attr/colorButtonNormal"
+        android:text="@string/register"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="129dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/already_registered"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/textview_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_login"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginBottom="100dp"
+        android:paddingLeft="10dp"
+        android:text="@string/login"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
