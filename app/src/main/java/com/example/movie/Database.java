@@ -1,5 +1,4 @@
-package com.example.movie;
-
+package com.nopalyer.movieapp;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -54,6 +53,20 @@ public class Database extends SQLiteOpenHelper{
         else
             return  false;
     }
-}
+    public boolean checkUser(String username){
+        String[] columns = { COL_1 };
+        SQLiteDatabase db = getReadableDatabase();
+        String selection = COL_2 + "=?" + " and " + COL_3 + "=?";
+        String[] selectionArgs = { username };
+        Cursor cursor = db.query(TABLE_NAME,columns,selection,selectionArgs,null,null,null);
+        int count = cursor.getCount();
+        cursor.close();
+        db.close();
 
+        if(count>0)
+            return  true;
+        else
+            return  false;
+    }
+}
 
