@@ -1,5 +1,4 @@
-package com.example.movie;
-
+package com.nopalyer.movieapp.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 //import android.support.v7.app.AppCompatActivity;
@@ -10,7 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Register2 extends AppCompatActivity {
+import com.nopalyer.movieapp.Database;
+import com.nopalyer.movieapp.R;
+
+public class Register extends AppCompatActivity {
     Database db;
     EditText mTextUsername;
     EditText mTextPassword;
@@ -21,7 +23,7 @@ public class Register2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register2);
+        setContentView(R.layout.activity_register);
 
         db = new Database(this);
         mTextUsername = (EditText)findViewById(R.id.edittext_username);
@@ -34,7 +36,7 @@ public class Register2 extends AppCompatActivity {
         mTextViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent LoginIntent = new Intent(Register2.this,Login.class);
+                Intent LoginIntent = new Intent(Register.this,Login.class);
                 startActivity(LoginIntent);
             }
         });
@@ -51,19 +53,20 @@ public class Register2 extends AppCompatActivity {
                 if(pwd.equals(confirm_pwd)){
                     long val = db.addUser(user,pwd);
                     if(val > 0){
-                        Toast.makeText(Register2.this,"You have registered",Toast.LENGTH_SHORT).show();
-                        Intent moveToLogin = new Intent(Register2.this,Login.class);
+                        Toast.makeText(Register.this,"You have registered",Toast.LENGTH_SHORT).show();
+                        Intent moveToLogin = new Intent(Register.this,Login.class);
                         startActivity(moveToLogin);
                     }
 
                     else{
-                        Toast.makeText(Register2.this,"Registeration Error",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this,"Registeration Error",Toast.LENGTH_SHORT).show();
                     }
                 }
 
                 //error if both passwords don't match
+                // hassan
                 else{
-                    Toast.makeText(Register2.this,"Passwords do not match",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Register.this,"Passwords do not match",Toast.LENGTH_SHORT).show();
                 }
             }
         });
