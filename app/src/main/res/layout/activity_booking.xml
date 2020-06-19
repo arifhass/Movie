@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:background="@color/yellow"
     android:gravity="center"
     android:layout_height="match_parent">
-
 
 
     <LinearLayout
@@ -53,20 +53,13 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="103dp"
-        android:layout_height="31dp"
-        android:text="DAY"
-        android:textColor="@color/black" />
-
-    <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:gravity="center_horizontal"
         android:text="CLICK TIME SLOT TO PROCEED"
-        android:textSize="24sp"
-        android:gravity="center_horizontal" />
+        android:textAlignment="center"
+        android:textSize="14sp" />
 
 
 </LinearLayout>

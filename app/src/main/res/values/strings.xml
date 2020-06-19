@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Movie</string>
-
+    <string name="app_name">MovieApp</string>
     <string name="login">LOGIN</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -9,5 +8,4 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="already_registered">Already Registered?</string>
     <string name="welcome_user">Welcome User</string>
-
 </resources>

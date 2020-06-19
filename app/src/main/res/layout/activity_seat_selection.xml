@@ -105,35 +105,31 @@
 
 
     <Button
-        android:id="@+id/A5"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="45dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/A4"
-        android:layout_marginStart="67dp"
-        android:layout_marginLeft="67dp"
-        android:layout_toEndOf="@+id/A4"
-        android:layout_toRightOf="@+id/A4"
-        android:background="#E6C200"
+        android:id="@+id/A5"
         android:text="A5"
-        android:textSize="10dp" />
-
+        android:textSize="10dp"
+        android:background="#E6C200"
+        android:layout_alignTop="@+id/A4"
+        android:layout_toStartOf="@+id/A6"
+        android:layout_toLeftOf="@+id/A6" />
 
     <Button
-        android:id="@+id/A6"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="45dp"
         android:layout_height="25dp"
-        android:layout_alignTop="@+id/A5"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_toEndOf="@+id/A5"
-        android:layout_toRightOf="@+id/A5"
-        android:background="#E6C200"
+        android:id="@+id/A6"
         android:text="A6"
-        android:textSize="10dp"
+        android:textSize="10sp"
+        android:background="#E6C200"
+        android:layout_alignTop="@+id/A5"
+        android:layout_alignEnd="@+id/proceed"
         tools:ignore="RtlCompat" />
+
+
+
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -150,16 +146,15 @@
         android:layout_toRightOf="@+id/textView13" />
 
     <TextView
+        android:id="@+id/textView13"
         android:layout_width="120dp"
         android:layout_height="40dp"
-        android:text="Screen Here"
-        android:id="@+id/textView13"
-        android:textColor="?android:attr/colorPressedHighlight"
-        android:textSize="20dp"
-        android:layout_marginBottom="24dp"
         android:layout_above="@+id/proceed"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_marginBottom="24dp"
+        android:text="Select seats"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:textSize="20dp" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
